@@ -49,19 +49,15 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
+  Engine.update(engine);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
-  Matter.Body.setStatic( packageSprite , false);
+  keyPressed();
   drawSprites();
  
 }
 
 function keyPressed() {
- if (keyCode === DOWN_ARROW) {
-    // Look at the hints in the document and understand how to make the package body fall only on
-    
-  }
+	 if (keyCode === DOWN_ARROW) { Matter.Body.setStatic(packageBody,false); 
+	} 
 }
-
-
-
